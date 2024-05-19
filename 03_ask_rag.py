@@ -12,8 +12,8 @@ client, completion_model = api_mode(mode)
 
 # question = "What is the program for the building?"
 # question = "What is the place like?"
-# question = "Is there any mention of the construction materials that should be used?"
-question = "What are the names of the most famous brutalist buildings?"
+question = "Is there any mention of the construction materials that should be used?"
+# question = "What are the names of the most famous brutalist buildings?"
 
 num_results = 1 #how many vectors to retrieve
 
@@ -55,8 +55,10 @@ def rag_answer(question, prompt, model=completion_model[0]["model"]):
         temperature=0.1,
     )
     return completion.choices[0].message.content
-
-print("Waiting for an answer...")
+print("="*50)
+print("QUESTION:")
+print(question)
+print("...Waiting for an answer...")
 # Embed our question
 question_vector = get_embedding(question)
 
@@ -74,7 +76,13 @@ prompt = f"""Answer the question based on the provided information.
             If you don't know the answer, just say "I do not know.". Don't make up an answer.
             PROVIDED INFORMATION: """ + rag_result
 
-print(prompt)
 answer = rag_answer(question, prompt)
+
+# print(prompt)
+print("-"*50)
+print("RAG_RESULT:")
+print(rag_result)
+print("-"*50)
 print("ANSWER:")
 print(answer)
+print("="*50)
