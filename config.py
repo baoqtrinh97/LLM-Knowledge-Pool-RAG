@@ -10,6 +10,15 @@ openai_client = OpenAI(api_key=OPENAI_API_KEY)
 # Models
 embedding_model = "nomic-ai/nomic-embed-text-v1.5-GGUF"
 
+vn_llama2_7b = [
+        {
+            "model": "TheBloke/vietnamese-llama2-7B-40GB-GGUF",
+            'api_key': 'any string here is fine',
+            'api_type': 'openai',
+            'base_url': "http://localhost:1234/v1",
+        }
+]
+
 mistral_8x7b = [
         {
             "model": "cjpais/llava-1.6-mistral-7b-gguf/llava-1.6-mistral-7b.Q6_K.gguf",
