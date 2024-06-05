@@ -12,8 +12,8 @@ client, completion_model = api_mode(mode)
 
 # question = "Công ty cubic hoạt động trong lĩnh vực nào"
 # question = "Một Dấu ấn quan trọng nhất của công ty Cubic là gì?"
-question = "Cubic có BIM không"
-# question = "công ty con của Cubic tên là gì"
+# question = "Cubic có BIM không?"
+question = "công ty con của Cubic tên là gì"
 
 
 num_results = 3 #how many vectors to retrieve

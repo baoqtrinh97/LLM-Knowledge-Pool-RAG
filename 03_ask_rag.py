@@ -12,8 +12,8 @@ client, completion_model = api_mode(mode)
 
 # question = "What is the program for the building?"
 # question = "What is the place like?"
-question = "Is there any mention of the construction materials that should be used?"
-# question = "What are the names of the most famous brutalist buildings?"
+# question = "Is there any mention of the construction materials that should be used?"
+question = "What are the names of the most famous brutalist buildings?"
 
 num_results = 1 #how many vectors to retrieve
 
@@ -79,9 +79,9 @@ prompt = f"""Answer the question based on the provided information.
 answer = rag_answer(question, prompt)
 
 # print(prompt)
-print("-"*50)
-print("RAG_RESULT:")
-print(rag_result)
+# print("-"*50)
+# print("RAG_RESULT:")
+# print(rag_result)
 print("-"*50)
 print("ANSWER:")
 print(answer)

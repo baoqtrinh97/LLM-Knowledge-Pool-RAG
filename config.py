@@ -10,9 +10,9 @@ openai_client = OpenAI(api_key=OPENAI_API_KEY)
 # Models
 embedding_model = "nomic-ai/nomic-embed-text-v1.5-GGUF"
 
-vn_llama2_7b = [
+aya_23_8B = [
         {
-            "model": "TheBloke/vietnamese-llama2-7B-40GB-GGUF",
+            "model": "bartowski/aya-23-8B-GGUF",
             'api_key': 'any string here is fine',
             'api_type': 'openai',
             'base_url': "http://localhost:1234/v1",
